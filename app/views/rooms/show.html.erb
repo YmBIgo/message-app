@@ -18,7 +18,7 @@
           <p class="alert alert-success">
           <%= m.content %>
           <br><br>
-          <small><a href="/users/<%= m.user_id %>"><strong><%= m.user.family_name %> <%= m.user.first_name %>さん</strong></a></small>
+          <small><a href="/users/<%= m.user_id %>"><strong><%= m.user.family_name %> <%= m.user.first_name %>さん</strong>　<%= image_tag "user#{m.user_id}_thumb.jpg" %></a></small>
           </p>
           </h4>
         <% else %>
@@ -26,7 +26,7 @@
           <p class="alert alert-info">
           <%= m.content %>
           <br><br>
-          <small><a href="/users/<%= m.user_id %>"><strong><%= m.user.family_name %> <%= m.user.first_name %>さん</strong></a></small>
+          <small><a href="/users/<%= m.user_id %>"><%= image_tag "user#{m.user_id}_thumb.jpg" %>　<strong><%= m.user.family_name %> <%= m.user.first_name %>さん</strong></a></small>
           </p>
           </h4>
         <% end %>

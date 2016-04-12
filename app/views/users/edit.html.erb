@@ -1,12 +1,22 @@
 <h1>ユーザー情報を編集する</h1>
 <hr>
 <%= form_for @user do |f| %>
+  <p>プロフィール画像</p>
+  <% if @user.image? %>
+    <%= image_tag @user.image.url(:medium) %>
+  <% end %>
+  <br><br>
+  <%= f.file_field :image %>
+  <br>
   <p>名字</p>
   <%= f.text_field :family_name, :class => "form-control my-form" %>
+  <br>
   <p>名前</p>
   <%= f.text_field :first_name, :class => "form-control my-form" %>
+  <br>
   <p>年齢</p>
   <%= f.number_field :age, :class => "form-control my-form" %>
+  <br>
   <p>自己紹介</p>
   <%= f.text_area :self_introduction, :class => "form-control my-form" %>
   <hr>

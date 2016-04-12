@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.id == current_user.id
-      # @user.update(params.require(:user).permit(:first_name, :family_name, :self_introduction, :age))
+      # @user.update(params.require(:user).permit(:first_name, :family_name, :self_introduction, :age, :image))
       redirect_to "/users/#{@user.id}/edit"
       flash[:alert] = "無効なユーザー"
     else
