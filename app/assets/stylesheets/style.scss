@@ -1,0 +1,19 @@
+.main-page{
+  margin-top:50px;
+}
+.my-form{
+  width:500px;
+}
+
+.header-image{
+  background-image: url(https://s3.amazonaws.com/rails-textbook/rails_for_sfc/images/header/header12.jpg);
+  height:400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.header-content{
+  font-size:75px;
+  padding-top:150px;
+}
